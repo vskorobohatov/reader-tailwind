@@ -1,7 +1,9 @@
 import { Outlet, Navigate } from "react-router";
+import { getAccessToken } from "~/helpers/tokenhelper";
 
 const AuthLayout = () => {
-  const isAuthenticated = false; // Replace with your authentication logic
+  const token = getAccessToken(); // Use the function from tokenhelper.ts
+  const isAuthenticated = !!token; // Check if the token exists
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;

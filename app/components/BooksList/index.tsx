@@ -14,16 +14,22 @@ const books: Book[] = [
 
 const BooksList: React.FC = () => {
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold text-gray-800 mb-4">Books List</h1>
+    <div className="p-6 min-h-screen">
+      <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+        Books List
+      </h1>
       <ul className="space-y-4">
         {books.map((book) => (
           <li
             key={book.id}
-            className="p-4 bg-white shadow rounded-lg hover:bg-gray-50 transition"
+            className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition cursor-pointer"
           >
-            <strong className="text-lg text-gray-900">{book.title}</strong>{' '}
-            <span className="text-gray-600">by {book.author}</span>
+            <strong className="text-lg text-gray-900 dark:text-white">
+              {book.title}
+            </strong>{' '}
+            <span className="text-gray-600 dark:text-gray-400">
+              by {book.author}
+            </span>
           </li>
         ))}
       </ul>
