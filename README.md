@@ -16,4 +16,4 @@ Start the development server:
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Application will be available at `http://localhost:5173`.
